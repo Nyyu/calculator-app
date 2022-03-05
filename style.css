@@ -1,0 +1,152 @@
+:root {
+    --white: #fff;
+
+    --bg-color: #000;
+    --bg-secondary-color: #000;
+
+    --btn-color: #000;
+    --btn-secondary-color: #000;
+    --btn-warning: #000;
+}
+
+* {
+    font-family: "Spartan", sans-serif;
+}
+
+/* Elements */
+body,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 375px;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+
+    padding: 25px;
+}
+nav div p {
+    margin-right: 15px;
+}
+nav div {
+    display: flex;
+}
+
+footer div {
+    position: absolute;
+    bottom: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Class */
+.btn-red {
+    color: white;
+    background: tomato;
+
+    box-shadow: 0 3.5px 0 0 blueviolet !important;
+}
+.btn-blue {
+    color: white;
+    background: blue;
+
+    box-shadow: 0 3.5px 0 0 rgb(43, 226, 52) !important;
+}
+
+/* ID */
+#switch {
+    display: flex;
+}
+#switch > div {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+#switch > div input,
+#switch > div label {
+    cursor: pointer;
+}
+
+#switch > div {
+    position: relative;
+}
+
+#result {
+    display: flex;
+    text-align: end;
+    width: 285px;
+    height: 65px;
+
+    padding: 15px;
+    margin: 0 25px;
+
+    border-radius: 8px;
+    border: none;
+
+    background: #000;
+    color: aliceblue;
+
+    font-size: 2rem;
+    overflow: none;
+}
+
+#buttons {
+    display: grid;
+    grid-template: auto / repeat(4, 1fr);
+
+    margin: 25px;
+    padding: 15px;
+    background: rgb(97, 94, 94);
+
+    border-radius: 16px;
+}
+#buttons button {
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 6px;
+
+    margin: 6px;
+    font-size: 1.5rem;
+
+    box-shadow: 0 3.5px 0 0 rgb(238, 255, 7);
+}
+#buttons button:hover {
+    position: relative;
+    filter: brightness(0.75);
+    bottom: 3px;
+}
+#buttons button.btn-l {
+    font-size: 1.1rem;
+}
+#buttons button:nth-child(n + 17) {
+    width: auto;
+}
+#buttons button:nth-child(17) {
+    grid-column: 1 / span 2;
+}
+#buttons button:nth-child(18) {
+    grid-column: 3 / span 2;
+}

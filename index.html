@@ -1,26 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <title>Frontend Mentor | Calculator app</title>
 
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Custom style -->
+        <link rel="stylesheet" href="style.css" />
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <h1>calc</h1>
+            <div>
+                <p>THEME</p>
+                <div id="switch">
+                    <div>
+                        <label for="theme-01">1</label>
+                        <input type="radio" name="theme" id="theme-01" />
+                    </div>
+
+                    <div>
+                        <label for="theme-02">2</label>
+                        <input type="radio" name="theme" id="theme-02" />
+                    </div>
+
+                    <div>
+                        <label for="theme-03">3</label>
+                        <input type="radio" name="theme" id="theme-03" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div>
+                <input type="number" id="result" />
+
+                <div id="buttons">
+                    <!-- 1° row -->
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button class="btn-l btn-blue" id="del">DEL</button>
+
+                    <!-- 2° row -->
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>+</button>
+
+                    <!-- 3° row -->
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>-</button>
+
+                    <!-- 4° row -->
+                    <button>.</button>
+                    <button>0</button>
+                    <button>/</button>
+                    <button>x</button>
+
+                    <!-- last row -->
+                    <button class="btn-l btn-blue" id="reset">RESET</button>
+                    <button class="btn-red" id="rlt">=</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by <a href="#">Your Name Here</a>.
+            </div>
+        </footer>
+    </body>
 </html>
