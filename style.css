@@ -1,12 +1,22 @@
 :root {
-    --white: #fff;
+    /* TEXT */
+    --txt-primary: #ffffff;
+    --txt-secondary: #444b5a;
 
-    --bg-color: #000;
-    --bg-secondary-color: #000;
+    /* BG */
+    --bg-primary: hsl(222, 26%, 31%);
+    --bg-secondary: hsl(223, 31%, 20%);
+    --bg-extra: hsl(224, 36%, 15%);
 
-    --btn-color: #000;
-    --btn-secondary-color: #000;
-    --btn-warning: #000;
+    /* BTN */
+    --btn-bg: #eae3dc;
+    --btn-shadow: #b4a597;
+
+    --btn-red: #d03f2f;
+    --btn-red-shadow: #93261a;
+
+    --btn-grayish: #637097;
+    --btn-grayish-shadow: #404e72;
 }
 
 * {
@@ -26,6 +36,9 @@ h3 {
 body {
     max-width: 375px;
     margin: auto;
+
+    background: var(--bg-primary);
+    color: var(--txt-primary);
 }
 
 nav {
@@ -44,7 +57,9 @@ nav div {
 
 footer div {
     position: absolute;
-    bottom: 0;
+    left: 0;
+    top: 35vh;
+    writing-mode: vertical-lr;
 }
 
 main {
@@ -61,18 +76,23 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+button {
+    background: var(--btn-bg);
+    box-shadow: 0 3.5px 0 0 var(--btn-shadow);
+}
+
 /* Class */
 .btn-red {
-    color: white;
-    background: tomato;
+    color: var(--txt-primary);
+    background: var(--btn-red);
 
-    box-shadow: 0 3.5px 0 0 blueviolet !important;
+    box-shadow: 0 3.5px 0 0 var(--btn-red-shadow) !important;
 }
 .btn-blue {
-    color: white;
-    background: blue;
+    color: var(--txt-primary);
+    background: var(--btn-grayish);
 
-    box-shadow: 0 3.5px 0 0 rgb(43, 226, 52) !important;
+    box-shadow: 0 3.5px 0 0 var(--btn-grayish-shadow) !important;
 }
 
 /* ID */
@@ -99,14 +119,14 @@ input[type="number"] {
     width: 285px;
     height: 65px;
 
-    padding: 15px;
+    padding: 15px 25px;
     margin: 0 25px;
 
     border-radius: 8px;
     border: none;
 
-    background: #000;
-    color: aliceblue;
+    background: var(--bg-extra);
+    color: var(--txt-primary);
 
     font-size: 2rem;
     overflow: none;
@@ -118,7 +138,7 @@ input[type="number"] {
 
     margin: 25px;
     padding: 15px;
-    background: rgb(97, 94, 94);
+    background: var(--bg-secondary);
 
     border-radius: 16px;
 }
@@ -131,8 +151,6 @@ input[type="number"] {
 
     margin: 6px;
     font-size: 1.5rem;
-
-    box-shadow: 0 3.5px 0 0 rgb(238, 255, 7);
 }
 #buttons button:hover {
     position: relative;
@@ -169,6 +187,8 @@ input[type="number"] {
 #switch label span {
     position: relative;
     bottom: 20px;
+
+    font-size: 0.85em;
 }
 
 label {
@@ -176,7 +196,7 @@ label {
 
     width: 25px;
     height: 25px;
-    background-color: tomato;
+    background-color: var(--bg-secondary);
 }
 
 label::before,
@@ -195,7 +215,7 @@ label::before {
     height: 15px;
     width: 15px;
 
-    background: #000;
+    background: var(--btn-red);
     border-radius: 100%;
 
     transition: all 0.5s;
