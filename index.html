@@ -59,36 +59,40 @@
             </nav>
             <main>
                 <div>
-                    <input type="number" id="result" placeholder="0.00" />
+                    <input type="text" id="result" placeholder="0.00" />
 
                     <div id="buttons">
                         <!-- 1° row -->
                         <button>7</button>
                         <button>8</button>
                         <button>9</button>
-                        <button class="btn-l btn-blue" id="del">DEL</button>
+                        <button class="btn-l btn-blue btn-sp" id="del">
+                            DEL
+                        </button>
 
                         <!-- 2° row -->
                         <button>4</button>
                         <button>5</button>
                         <button>6</button>
-                        <button>+</button>
+                        <button id="plus" class="btn-sp">+</button>
 
                         <!-- 3° row -->
                         <button>1</button>
                         <button>2</button>
                         <button>3</button>
-                        <button>-</button>
+                        <button id="minus" class="btn-sp">-</button>
 
                         <!-- 4° row -->
                         <button>.</button>
                         <button>0</button>
-                        <button>/</button>
-                        <button>x</button>
+                        <button class="btn-sp" id="divide">/</button>
+                        <button class="btn-sp" id="multiply">x</button>
 
                         <!-- last row -->
-                        <button class="btn-l btn-blue" id="reset">RESET</button>
-                        <button class="btn-red" id="rlt">=</button>
+                        <button class="btn-l btn-blue btn-sp" id="reset">
+                            RESET
+                        </button>
+                        <button class="btn-red btn-sp" id="rlt">=</button>
                     </div>
                 </div>
             </main>
@@ -105,5 +109,7 @@
                 </div>
             </footer>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>

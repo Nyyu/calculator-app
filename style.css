@@ -78,13 +78,17 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-input[type="number"] {
+/* input[type="number"] {
     -moz-appearance: textfield;
-}
+} */
 
 button {
     background: var(--btn-bg);
     box-shadow: 0 3.5px 0 0 var(--btn-shadow);
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 /* Class */
@@ -138,6 +142,9 @@ button {
 
     font-size: 2rem;
     overflow: none;
+}
+#result:focus {
+    outline: none;
 }
 
 #buttons {
