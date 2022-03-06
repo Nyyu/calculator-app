@@ -11,6 +11,7 @@
 
 * {
     font-family: "Spartan", sans-serif;
+    text-align: center;
 }
 
 /* Elements */
@@ -149,4 +150,67 @@ input[type="number"] {
 }
 #buttons button:nth-child(18) {
     grid-column: 3 / span 2;
+}
+
+/* Radio input */
+[type="radio"] {
+    display: none;
+}
+
+#switch {
+    position: relative;
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin-left: 10px;
+}
+#switch label span {
+    position: relative;
+    bottom: 20px;
+}
+
+label {
+    position: relative;
+
+    width: 25px;
+    height: 25px;
+    background-color: tomato;
+}
+
+label::before,
+label::after {
+    margin: auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+label::before {
+    content: "";
+
+    height: 15px;
+    width: 15px;
+
+    background: #000;
+    border-radius: 100%;
+
+    transition: all 0.5s;
+}
+
+input[type="radio"] + label::before {
+    transform: scale(0);
+}
+input[type="radio"]:checked + label::before {
+    transform: scale(1);
+}
+
+label:nth-child(2) {
+    border-radius: 100% 0 0 100%;
+}
+label:nth-child(6) {
+    border-radius: 0 100% 100% 0;
 }
