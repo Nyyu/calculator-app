@@ -7,6 +7,16 @@ $("button").on("click", function () {
     }
 });
 
+$(document).on("keydown", (event) => {
+    // if ($(this).hasClass("btn-sp")) {
+    //     spClass($(this).text().replace(/\s/g, ""), $("#result"));
+    // } else {
+    //     let temp = $("#result").val();
+    //     $("#result").val(temp + $(this).html());
+    // }
+    console.log(event.key);
+});
+
 function spClass(key, item) {
     switch (key) {
         case "RESET":
@@ -23,7 +33,8 @@ function spClass(key, item) {
             }
             break;
         case "=":
-            result(item.val());
+            let finalR = result(item.val());
+            item.val(finalR);
             break;
 
         default:
@@ -57,22 +68,6 @@ function spClass(key, item) {
 }
 
 function result(item) {
-    /* 
-    A few concepts could be used as a basis, first i need to work with the order priority.
-    To do so i need to start off from the left and run the array multiple times over and over 
-    so that i might be able to achieve sth decent. and once the * and / are done i can proceed
-    to da + and - operators. 
-
-    A few concerns:
-
-    #1 I still dont have my fucking glass, thus i can quite see what i'm typing
-    #2 using array methods to find * and division don't work quite well so i need to map
-    them out properly and then proceed to the first step
-    #3 i am obligate to create a code that runs step by step. in this way i can assure
-    that my could wouldn't break half way through it.
-    #4 I need a better filter, otherwise i could break my calculator with a few operador + final(.)
-    combos
-    */
     let x, y;
 
     x = item.split(" ");
@@ -119,7 +114,7 @@ function result(item) {
         } else y = true;
     } while (y != true);
 
-    console.log(x);
+    return x;
 }
 
 function calculator(firstValue, secondValue, operator) {
@@ -142,4 +137,18 @@ function calculator(firstValue, secondValue, operator) {
             break;
     }
 }
-function changeTheme() {}
+function changeTheme(id, obj) {
+    switch (id) {
+        case "t1":
+            $("html").css(obj.c1.name, obj.c1.value);
+            break;
+
+        default:
+            console.error(
+                ErrorEvent +
+                    " - Something went wrong with 'changeTheme'. Values used: " +
+                    `${id}, ${obj}`
+            );
+            break;
+    }
+}
