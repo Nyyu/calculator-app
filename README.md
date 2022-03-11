@@ -22,7 +22,7 @@ A basic calculator application
 -   Desktop:
 
     <p align="center">
-      <img src="design/desktop-design-theme-1.jpg">
+      <img src="design/theme-1.jpg">
     </p>
 
 -   Mobile:
