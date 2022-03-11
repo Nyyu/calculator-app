@@ -82,6 +82,12 @@ const theme03 = {
 
 fColor("t1"); // cuz for some reason my guy got no sense of pattern
 
+if (localStorage.getItem("theme") != null) {
+    $("input:checked").removeAttr("checked");
+    $("#" + localStorage.getItem("theme")).prop("checked", true);
+    changeTheme(localStorage.getItem("theme"));
+}
+
 $("button").on("click", function () {
     if ($(this).hasClass("btn-sp")) {
         spClass($(this).text().replace(/\s/g, ""), $("#result"));
@@ -239,6 +245,8 @@ function changeTheme(id) {
             break;
     }
     fColor(id);
+
+    localStorage.setItem("theme", id);
 }
 
 function theme(obj) {
