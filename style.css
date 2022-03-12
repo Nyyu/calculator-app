@@ -175,6 +175,8 @@ button {
     position: relative;
     filter: brightness(0.75);
     bottom: 3px;
+    
+    cursor: pointer;
 }
 #buttons button.btn-l {
     font-size: 1.1rem;
